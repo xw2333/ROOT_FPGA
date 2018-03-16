@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/fifo_512x8.v"
+verilog work "../../design/shift_line_buffer.v"
+verilog work "../../design/fliter_window.v"

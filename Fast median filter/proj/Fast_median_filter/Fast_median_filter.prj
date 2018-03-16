@@ -1,0 +1,6 @@
+verilog work "ipcore_dir/fifo_512x8.v"
+verilog work "../../design/shift_line_buffer.v"
+verilog work "../../design/middle.v"
+verilog work "../../design/median.v"
+verilog work "../../design/fliter_window.v"
+verilog work "../../design/Fast_ median_filter.v"

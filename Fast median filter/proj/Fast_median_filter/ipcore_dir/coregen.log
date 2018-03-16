@@ -1,0 +1,71 @@
+INFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+WARNING:sim - A core named 'fifo_512x8' already exists in the project. Output
+   products for this core may be overwritten.
+Resolving generics for 'fifo_512x8'...
+WARNING:sim - A core named 'fifo_512x8' already exists in the project. Output
+   products for this core may be overwritten.
+Applying external generics to 'fifo_512x8'...
+Delivering associated files for 'fifo_512x8'...
+Delivering EJava files for 'fifo_512x8'...
+Generating implementation netlist for 'fifo_512x8'...
+INFO:sim - Pre-processing HDL files for 'fifo_512x8'...
+WARNING:sim - BlackBox generator run option '-ifmt' found multiple times. Only
+   the first occurence is considered.
+Running synthesis for 'fifo_512x8'
+Running ngcbuild...
+Writing VEO instantiation template for 'fifo_512x8'...
+Writing Verilog behavioral simulation model for 'fifo_512x8'...
+WARNING:sim - Overwriting existing file C:/Users/Administrator/Desktop/fsat
+   average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8/doc/fifo_generator_v9_
+   3_vinfo.html with file from view xilinx_documentation
+Delivered 3 files into directory C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8
+Delivered 1 file into directory C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8
+Generating ASY schematic symbol...
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'fifo_512x8'...
+Generating metadata file...
+Regenerating ISE project file for 'fifo_512x8'...
+Generating ISE project...
+XCO file found: fifo_512x8.xco
+XMDF file found: fifo_512x8_xmdf.tcl
+Adding C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8.asy -view all
+-origin_type imported
+Adding C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8.ngc -view all
+-origin_type created
+Checking file "C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8.ngc" for project device
+match ...
+File "C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8.ngc" device information
+matches project device.
+Adding C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8.sym -view all
+-origin_type imported
+Adding C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8.v -view all -origin_type
+created
+INFO:HDLCompiler:1845 - Analyzing Verilog file
+   "C:/Users/Administrator/Desktop/fsat
+   average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8.v" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding C:/Users/Administrator/Desktop/fsat
+average/proj/mean_filter/ipcore_dir/tmp/_cg/fifo_512x8.veo -view all
+-origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/fifo_512x8"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'fifo_512x8'.

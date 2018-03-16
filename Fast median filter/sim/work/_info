@@ -1,0 +1,380 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/modelism/modelsim_10.4/install/examples
+T_opt
+!s110 1520678732
+V]EmIP3lm4DbWH3jT_e59D0
+04 20 4 work tb_shift_line_buffer fast 0
+=1-485b397cd9c6-5aa3b74c-22b-1f70
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z2 OL;O;10.4;61
+R0
+T_opt1
+!s110 1520683301
+VnBNDLVn>emm8OU=GS];9M2
+04 16 4 work tb_filter_window fast 0
+=1-485b397cd9c6-5aa3c924-39e-1acc
+R1
+n@_opt1
+R2
+R0
+T_opt2
+!s110 1521116883
+V95aL9@AG3=DlT0BW?G5^^1
+04 21 4 work tb_Fast_median_filter fast 0
+=1-485b397cd9c6-5aaa66d1-1a1-1e4c
+R1
+n@_opt2
+R2
+vbig
+Z3 !s110 1521116877
+!i10b 1
+!s100 7Km]@P2K;]UaC:d<L3UcM0
+IK<oU93?<YRJX>z?`3H`Jf2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 dC:/Users/Administrator/Desktop/Fast median filter/sim
+w1520838015
+8./../design/median.v
+F./../design/median.v
+Z6 L0 21
+Z7 OL;L;10.4;61
+r1
+!s85 0
+31
+Z8 !s108 1521116877.083000
+Z9 !s107 ./../design/shift_line_buffer.v|./../design/middle.v|./../design/median.v|./../design/fliter_window.v|./../design/Fast_ median_filter.v|
+Z10 !s90 -reportprogress|300|./../design/Fast_ median_filter.v|./../design/fliter_window.v|./../design/median.v|./../design/middle.v|./../design/shift_line_buffer.v|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vFast_median_filter
+R3
+!i10b 1
+!s100 E;C[7;oTKK@813ZNUBz:Y2
+IRb?Xfjmd<B6cZiK[^jD`L0
+R4
+R5
+w1521113920
+8./../design/Fast_ median_filter.v
+F./../design/Fast_ median_filter.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+n@fast_median_filter
+vfifo_512x8
+R3
+!i10b 1
+!s100 82EbVh=][WeTjcEGf;l3@3
+Im_k]@Y_hHblVF7B7NW^>O0
+R4
+R5
+w1520648690
+8./../proj/Fast_median_filter/ipcore_dir/fifo_512x8.v
+F./../proj/Fast_median_filter/ipcore_dir/fifo_512x8.v
+L0 39
+R7
+r1
+!s85 0
+31
+!s108 1521116877.300000
+!s107 ./../proj/Fast_median_filter/ipcore_dir/fifo_512x8.v|
+!s90 -reportprogress|300|./../proj/Fast_median_filter/ipcore_dir/fifo_512x8.v|
+!i113 0
+R11
+vFIFO_GENERATOR_V9_3
+R3
+!i10b 1
+!s100 X>md@5`lm7j=iBlOa`22T1
+I:Q4nKMXXh?VlFJ1P`T5Ba0
+R4
+R5
+Z12 w1381689573
+Z13 8./xilinx_lib/FIFO_GENERATOR_V9_3.v
+Z14 F./xilinx_lib/FIFO_GENERATOR_V9_3.v
+L0 98
+R7
+r1
+!s85 0
+31
+Z15 !s108 1521116877.486000
+Z16 !s107 ./xilinx_lib/FIFO_GENERATOR_V9_3.v|
+Z17 !s90 -reportprogress|300|./xilinx_lib/FIFO_GENERATOR_V9_3.v|
+!i113 0
+R11
+n@f@i@f@o_@g@e@n@e@r@a@t@o@r_@v9_3
+vfifo_generator_v9_3_axic_reg_slice
+R3
+!i10b 1
+!s100 `mIThOSgUG0>hULDRiVg<1
+I4<L6c`nnYzOk;e6[U4Aj11
+R4
+R5
+R12
+R13
+R14
+L0 6953
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R11
+vfifo_generator_v9_3_beh_ver_ll_afifo
+R3
+!i10b 1
+!s100 LKj7W>k7U:3g`8Q=0nQDg3
+IzD1Qe2?>7cNzlG0b=KI3J2
+R4
+R5
+R12
+R13
+R14
+L0 5409
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R11
+vfifo_generator_v9_3_bhv_ver_as
+R3
+!i10b 1
+!s100 ?L;]V;hHNNUXbJF5gYMeJ3
+IiX0Y@]dKhfd<[PzD9]X=51
+R4
+R5
+R12
+R13
+R14
+L0 3736
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R11
+vfifo_generator_v9_3_bhv_ver_preload0
+R3
+!i10b 1
+!s100 G0YV9CFdeR:cN70m[EAiJ0
+ITS^a4djlnQDMBIZGlc14>3
+R4
+R5
+R12
+R13
+R14
+L0 6452
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R11
+vfifo_generator_v9_3_bhv_ver_ss
+R3
+!i10b 1
+!s100 7YDi=>^<WH=H>0j5g]X^^1
+Im4kc]2Zh@`YGR1dBTINRR1
+R4
+R5
+R12
+R13
+R14
+L0 5535
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R11
+vFIFO_GENERATOR_V9_3_CONV_VER
+R3
+!i10b 1
+!s100 Ua`AEnh:WQZVn=0^9Z6V:2
+I^M_0KYSlO9l:DD1:`Gl_<0
+R4
+R5
+R12
+R13
+R14
+L0 2378
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R11
+n@f@i@f@o_@g@e@n@e@r@a@t@o@r_@v9_3_@c@o@n@v_@v@e@r
+vfifo_generator_v9_3_sync_stage
+R3
+!i10b 1
+!s100 OJ19RGQ[KF:1BKck6J]<h0
+I5;T@SB8ZJ2ZESCDQG628J0
+R4
+R5
+R12
+R13
+R14
+L0 3715
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R11
+vfliter_window
+R3
+!i10b 1
+!s100 P26;NFn_jY^Vn2`gX9FbT0
+I;P;AlID6gS[TXmFm33oE_3
+R4
+R5
+w1521116798
+8./../design/fliter_window.v
+F./../design/fliter_window.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+vmiddle
+R3
+!i10b 1
+!s100 oeZ:<o=U7A149n0nUgZ442
+I5OR^3iL6bonjYa`56QTGO3
+R4
+R5
+w1434076202
+8./../design/middle.v
+F./../design/middle.v
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+vshift_line_buffer
+R3
+!i10b 1
+!s100 m<UfM>k3GZ:7h?Y]hJz3@0
+Ij1WI:32g;I^209=ml^eo`2
+R4
+R5
+w1521116874
+8./../design/shift_line_buffer.v
+F./../design/shift_line_buffer.v
+L0 5
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+vtb_Fast_median_filter
+!s110 1521116876
+!i10b 1
+!s100 :f:07cHQ?]5dFFK]d>h?70
+IFA7>gC:^[;7l_FH1>71m>3
+R4
+R5
+w1521115083
+8./tb_Fast_median_filter.v
+F./tb_Fast_median_filter.v
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1521116876.923000
+!s107 ./tb_Fast_median_filter.v|
+!s90 -reportprogress|300|./tb_Fast_median_filter.v|
+!i113 0
+R11
+ntb_@fast_median_filter
+vtb_filter_window
+!s110 1520683299
+!i10b 1
+!s100 2If7i6QH]HX43E2oLNg>d3
+IKNH6IfFPbM?EHP27dYJEX2
+R4
+Z18 dC:/Users/Administrator/Desktop/fsat average/sim
+w1520680932
+8./tb_filter_window.v
+F./tb_filter_window.v
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1520683299.614000
+!s107 ./tb_filter_window.v|
+!s90 -reportprogress|300|./tb_filter_window.v|
+!i113 0
+R11
+vtb_shift_line_buffer
+!s110 1520678731
+!i10b 1
+!s100 RK7=07aZ8O^?<f7Nm2eT63
+IfeEUAAGd@A1HM<XPHaC:@3
+R4
+R18
+w1520676737
+8./tb_shift_line_buffer.v
+F./tb_shift_line_buffer.v
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1520678731.223000
+!s107 ./tb_shift_line_buffer.v|
+!s90 -reportprogress|300|./tb_shift_line_buffer.v|
+!i113 0
+R11

@@ -1,0 +1,469 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: fliter_window.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fliter_window.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fliter_window"
+Output Format                      : NGC
+Target Device                      : xc6slx25-2-fgg484
+
+---- Source Options
+Top Module Name                    : fliter_window
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Administrator\Desktop\fsat average\proj\mean_filter\ipcore_dir\fifo_512x8.v" into library work
+Parsing module <fifo_512x8>.
+Analyzing Verilog file "C:\Users\Administrator\Desktop\fsat average\design\shift_line_buffer.v" into library work
+Parsing module <shift_line_buffer>.
+Analyzing Verilog file "C:\Users\Administrator\Desktop\fsat average\design\fliter_window.v" into library work
+Parsing module <fliter_window>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <fliter_window>.
+
+Elaborating module <shift_line_buffer>.
+
+Elaborating module <fifo_512x8>.
+WARNING:HDLCompiler:1499 - "C:\Users\Administrator\Desktop\fsat average\proj\mean_filter\ipcore_dir\fifo_512x8.v" Line 39: Empty module <fifo_512x8> remains a black box.
+WARNING:HDLCompiler:189 - "C:\Users\Administrator\Desktop\fsat average\design\shift_line_buffer.v" Line 79: Size mismatch in connection of port <prog_full_thresh>. Formal port size is 9-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\Administrator\Desktop\fsat average\design\shift_line_buffer.v" Line 103: Size mismatch in connection of port <prog_full_thresh>. Formal port size is 9-bit while actual signal size is 32-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fliter_window>.
+    Related source file is "C:\Users\Administrator\Desktop\fsat average\design\fliter_window.v".
+    Found 8-bit register for signal <Data01>.
+    Found 8-bit register for signal <Data00>.
+    Found 8-bit register for signal <Data11>.
+    Found 8-bit register for signal <Data10>.
+    Found 8-bit register for signal <Data21>.
+    Found 8-bit register for signal <Data20>.
+    Found 3-bit register for signal <dout_flag_r>.
+    Summary:
+	inferred  51 D-type flip-flop(s).
+Unit <fliter_window> synthesized.
+
+Synthesizing Unit <shift_line_buffer>.
+    Related source file is "C:\Users\Administrator\Desktop\fsat average\design\shift_line_buffer.v".
+INFO:Xst:3210 - "C:\Users\Administrator\Desktop\fsat average\design\shift_line_buffer.v" line 73: Output port <full> of the instance <fifo_512x8_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Administrator\Desktop\fsat average\design\shift_line_buffer.v" line 97: Output port <full> of the instance <fifo_512x8_inst2> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <rd2_en>.
+    Found 1-bit register for signal <rd1_en>.
+    Found 1-bit register for signal <done>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <shift_line_buffer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 10
+ 1-bit register                                        : 3
+ 3-bit register                                        : 1
+ 8-bit register                                        : 6
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo_512x8.ngc>.
+Loading core <fifo_512x8> for timing and area information for instance <fifo_512x8_inst1>.
+Loading core <fifo_512x8> for timing and area information for instance <fifo_512x8_inst2>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 54
+ Flip-Flops                                            : 54
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <fliter_window> ...
+
+Optimizing unit <shift_line_buffer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fliter_window, actual ratio is 1.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <shift_line_buffer_inst/fifo_512x8_inst2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <shift_line_buffer_inst/fifo_512x8_inst2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <shift_line_buffer_inst/fifo_512x8_inst2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <shift_line_buffer_inst/fifo_512x8_inst1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <shift_line_buffer_inst/fifo_512x8_inst1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <shift_line_buffer_inst/fifo_512x8_inst1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <shift_line_buffer_inst/fifo_512x8_inst2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <shift_line_buffer_inst/fifo_512x8_inst2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <shift_line_buffer_inst/fifo_512x8_inst2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <shift_line_buffer_inst/fifo_512x8_inst1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <shift_line_buffer_inst/fifo_512x8_inst1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <shift_line_buffer_inst/fifo_512x8_inst1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+FlipFlop Data21_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Data21_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Data21_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Data21_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Data21_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Data21_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Data21_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Data21_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <fliter_window> :
+	Found 4-bit shift register for signal <dout_flag_r_2>.
+Unit <fliter_window> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 58
+ Flip-Flops                                            : 58
+# Shift Registers                                      : 1
+ 4-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fliter_window.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 284
+#      GND                         : 5
+#      INV                         : 9
+#      LUT2                        : 57
+#      LUT3                        : 14
+#      LUT4                        : 68
+#      LUT5                        : 6
+#      LUT6                        : 22
+#      MUXCY                       : 82
+#      VCC                         : 3
+#      XORCY                       : 18
+# FlipFlops/Latches                : 201
+#      FD                          : 8
+#      FDC                         : 84
+#      FDCE                        : 78
+#      FDE                         : 1
+#      FDP                         : 28
+#      FDPE                        : 2
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 84
+#      IBUF                        : 11
+#      OBUF                        : 73
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             193  out of  30064     0%  
+ Number of Slice LUTs:                  177  out of  15032     1%  
+    Number used as Logic:               176  out of  15032     1%  
+    Number used as Memory:                1  out of   3664     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    302
+   Number with an unused Flip Flop:     109  out of    302    36%  
+   Number with an unused LUT:           125  out of    302    41%  
+   Number of fully used LUT-FF pairs:    68  out of    302    22%  
+   Number of unique control sets:        22
+
+IO Utilization: 
+ Number of IOs:                          85
+ Number of bonded IOBs:                  85  out of    266    31%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     52     1%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+sclk                               | BUFGP                  | 204   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.880ns (Maximum Frequency: 257.732MHz)
+   Minimum input arrival time before clock: 4.698ns
+   Maximum output required time after clock: 5.777ns
+   Maximum combinational path delay: 6.119ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sclk'
+  Clock period: 3.880ns (frequency: 257.732MHz)
+  Total number of paths / destination ports: 1428 / 434
+-------------------------------------------------------------------------
+Delay:               3.880ns (Levels of Logic = 3)
+  Source:            shift_line_buffer_inst/fifo_512x8_inst2/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0 (FF)
+  Destination:       shift_line_buffer_inst/fifo_512x8_inst2/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0 (FF)
+  Source Clock:      sclk rising
+  Destination Clock: sclk rising
+
+  Data Path: shift_line_buffer_inst/fifo_512x8_inst2/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0 to shift_line_buffer_inst/fifo_512x8_inst2/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.525   1.154  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2<0>)
+     INV:I->O              1   0.255   0.682  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wr_pntr_plus2<0>_inv1_INV_0 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wr_pntr_plus1<0>)
+     LUT3:I2->O            1   0.254   0.682  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0_dpot (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0_dpot)
+     LUT3:I2->O            1   0.254   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0_rstpot (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0_rstpot)
+     FDC:D                     0.074          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc1.count_d2_0
+    ----------------------------------------
+    Total                      3.880ns (1.362ns logic, 2.518ns route)
+                                       (35.1% logic, 64.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sclk'
+  Total number of paths / destination ports: 140 / 138
+-------------------------------------------------------------------------
+Offset:              4.698ns (Levels of Logic = 2)
+  Source:            s_rst_n (PAD)
+  Destination:       Data01_0 (FF)
+  Destination Clock: sclk rising
+
+  Data Path: s_rst_n to Data01_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  s_rst_n_IBUF (s_rst_n_IBUF)
+     INV:I->O             70   0.255   1.975  s_rst_n_inv1_INV_0 (s_rst_n_inv)
+     FDC:CLR                   0.459          Data01_0
+    ----------------------------------------
+    Total                      4.698ns (2.042ns logic, 2.656ns route)
+                                       (43.5% logic, 56.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sclk'
+  Total number of paths / destination ports: 65 / 65
+-------------------------------------------------------------------------
+Offset:              5.777ns (Levels of Logic = 2)
+  Source:            shift_line_buffer_inst/fifo_512x8_inst1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram (RAM)
+  Destination:       Data12<7> (PAD)
+  Source Clock:      sclk rising
+
+  Data Path: shift_line_buffer_inst/fifo_512x8_inst1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram to Data12<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO11    3   2.100   0.765  ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram (DOUTB<7>)
+     end scope: 'shift_line_buffer_inst/fifo_512x8_inst1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr:DOUTB<7>'
+     end scope: 'shift_line_buffer_inst/fifo_512x8_inst1:dout<7>'
+     OBUF:I->O                 2.912          Data12_7_OBUF (Data12<7>)
+    ----------------------------------------
+    Total                      5.777ns (5.012ns logic, 0.765ns route)
+                                       (86.8% logic, 13.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Delay:               6.119ns (Levels of Logic = 3)
+  Source:            data_valuable (PAD)
+  Destination:       dout_flag (PAD)
+
+  Data Path: data_valuable to dout_flag
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.328   0.944  data_valuable_IBUF (data_valuable_IBUF)
+     LUT2:I1->O            1   0.254   0.681  dout_flag1 (dout_flag_OBUF)
+     OBUF:I->O                 2.912          dout_flag_OBUF (dout_flag)
+    ----------------------------------------
+    Total                      6.119ns (4.494ns logic, 1.625ns route)
+                                       (73.4% logic, 26.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock sclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sclk           |    3.880|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 17.27 secs
+ 
+--> 
+
+Total memory usage is 259364 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+
